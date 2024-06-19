@@ -26,7 +26,7 @@ jobs:
       - name: Load environment variables
         id: env
         run: |
-          $(eval  include ./environments/${ENV}/env.sh)
+          $(eval include ./environments/dev/env.sh)
           echo "WEB_IMAGE=$WEB_IMAGE" >> $GITHUB_OUTPUT
           echo "BACKEND_IMAGE=$BACKEND_IMAGE" >> $GITHUB_OUTPUT
           echo "LOCAL_IMAGE=$LOCAL_IMAGE" >> $GITHUB_OUTPUT
