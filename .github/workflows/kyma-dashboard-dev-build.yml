@@ -28,7 +28,7 @@ jobs:
         run: |
           $(eval  include ./environments/${ENV}/env.sh)
           echo "WEB_IMAGE=$WEB_IMAGE" >> $GITHUB_OUTPUT
-          echo "BACKEND_IMAGE=$BACKEND_IMAGE" >> $GITHUB_OUTPUT
+          echo "BACKEND_IMAGE=$BACKEND_IMAGE" >> $GITHUB_OUTPUT 
           echo "LOCAL_IMAGE=$LOCAL_IMAGE" >> $GITHUB_OUTPUT
           cat $GITHUB_OUTPUT
           echo $WEB_IMAGE
