@@ -36,6 +36,11 @@ jobs:
           echo "LOCAL_IMAGE=$LOCAL_IMAGE" >> $GITHUB_OUTPUT
           cat $GITHUB_OUTPUT
           echo WEB IMAGE $WEB_IMAGE
+  test:
+    needs: load-env
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ needs.load-env.outputs.WEB_IMAGE }}
   build-web:
     needs: [ load-env ]
     uses: kyma-project/test-infra/.github/workflows/image-builder.yml@main # Usage: kyma-project/test-infra/.github/workflows/image-builder.yml@main
